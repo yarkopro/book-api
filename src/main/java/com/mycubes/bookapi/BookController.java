@@ -49,11 +49,6 @@ public class BookController {
 		}
 	}
 
-	private List iterableToList(Iterable<?> iterable) {
-		return StreamSupport.stream(iterable.spliterator(), false)
-			.collect(Collectors.toList());
-	}
-
 	@GetMapping(params = "search")
 	public ResponseEntity<List<Book>> searchBook(@RequestParam String search) {
 		Pattern queryPattern = Pattern.compile(search, Pattern.CASE_INSENSITIVE);
