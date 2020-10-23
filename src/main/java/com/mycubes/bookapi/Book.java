@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Data
 public class Book implements Serializable {
 	@Id
-	private int id;
+	private Integer id;
 	private String name;
 	private String author;
 	private LocalDate publishDate;
