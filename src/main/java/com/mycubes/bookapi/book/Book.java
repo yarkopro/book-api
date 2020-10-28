@@ -1,4 +1,4 @@
-package com.mycubes.bookapi;
+package com.mycubes.bookapi.book;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
