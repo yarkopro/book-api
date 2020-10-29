@@ -54,7 +54,6 @@ public class BookController {
 		Pattern queryPattern = Pattern.compile(search, Pattern.CASE_INSENSITIVE);
 
 		List<Book> searchResult = StreamSupport.stream(bookRepository.findAll().spliterator(), false)
-			.parallel()
 			.filter((Book book) -> queryPattern.matcher(book.getAuthor() + " " + book.getName()).find())
 			.collect(Collectors.toList());
 		if (searchResult.size() > 0) {
